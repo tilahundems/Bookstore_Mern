@@ -5,13 +5,14 @@ const Books = require('../Models/Books_Models')
 const Router= Express.Router();
 //Creating Books
 Router.post("/create", (req, res) => {
-  const { title, author, publish_year } = req.body;
+  const { title, author, publish_year} = req.body;
+       
   Books.create({
     title: title,
     author: author,
     publish_year: publish_year
   })
-    .then((result) => res.json(result))
+    .then((result) => res.status(200).json( {message:"Book Created Succeeded"}))
     .catch((err) => console.log("Creating Book Error" + err));
 });
 

@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Home from './Components/Homecomponent/Home'
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
  import {Route,Routes} from 'react-router-dom'

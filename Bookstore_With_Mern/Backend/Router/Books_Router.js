@@ -17,7 +17,7 @@ Router.post("/create", (req, res) => {
 });
 
 // Fetching Book
- Router.get('/books/:id', async(req,res)=>{
+ Router.get('/view/:id', async(req,res)=>{
    const {id} = req.params;
     await Books.findById(id).
    then((result)=>{
